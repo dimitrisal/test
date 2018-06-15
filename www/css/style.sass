@@ -1,0 +1,155 @@
+@import "compass/css3"
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Montserrat:400,700)
+
+$fontFamily: 'Roboto Condensed','Arial Narrow', Arial
+$green: #16d1ba
+$pink: #ff3d7f
+$purple: #a51d81
+$red: #f22845
+$yellow: #f3d328
+
+
+*, *:before, *:after
+	box-sizing: border-box
+
+// -------------------------------
+// Just to make the page beautyful
+// -------------------------------
+body
+	font: 300 18px $fontFamily
+	text-align: center
+	color: #999
+	padding: 50px 10px
+	background: #eee
+
+.header, h1, h2
+	font-family: 'Montserrat', Arial
+h1, h2:first-line
+	color: #000
+h1
+	font-size: 32px
+	text-transform: uppercase
+	letter-spacing: 3px
+	padding-bottom: 10px
+	+text-shadow(4px 9px 0 rgba(0,0,0,.1))
+h2
+	padding: 30px 0 10px
+	span
+		display: block
+		padding-top: 10px
+		font: 400 14px/1.6 $fontFamily
+		text-transform: uppercase
+		letter-spacing: 2px
+
+.header
+	text-transform: uppercase
+
+.section
+	display: inline-block
+	vertical-align: top
+	padding: 40px 20px 0
+
+
+// ------------------
+//	Menu - Starts here 
+// ------------------
+.menu
+	font-size: 16px
+	margin-bottom: 30px
+	// Columns
+	// Sizes	
+	&.l-big
+		font-size: 18px
+	&.l-medium
+		font-size: 14px
+	&.l-small
+		font-size: 12px
+	ul
+		width: 23em
+		max-width: 100%
+		padding: 0.5em
+		border: 1px solid #ddd
+		border-radius: .3em
+		background: #fff
+		margin: 0 auto
+		overflow: hidden
+	li
+		width: 33.3%
+		padding: 0.25em
+		float: left
+		text-align: center
+	.icon
+		display: block
+		padding: 1em
+		position: relative
+		font-family: $fontFamily
+		text-transform: uppercase
+		text-decoration: none
+		color: #999
+		border-radius: 5px
+		overflow: hidden
+		+transition(color .4s ease .15s)
+		span, &:before
+			position: relative
+			display: block
+			z-index: 5
+			+transition(transform .35s ease-in-out, text-shadow .35s ease-in-out)
+		span
+			width: calc(100% + 1.6em)
+			margin-left: -0.8em
+			overflow: hidden
+		&:before
+			width: 2.4em
+			font: normal 1.5em/1 FontAwesome
+			color: #fff
+			margin: .7em auto 1.2em
+		&:after
+			content: ''
+			display: inline-block
+			width: 14em
+			height: 14em
+			position: absolute
+			top: 0
+			left: 50%
+			margin: 0 0 0 -7em
+			background-color: $green
+			z-index: 1
+			border-radius: 100%
+			transform-origin: 50% 7.5%
+			+transform(scale(.28))
+			+transition(transform .35s cubic-bezier(.83,-.6,.68,.99))
+		&:hover
+			color: #fff
+			&:after
+				+transform(scale(1) translateY(-3.5em))
+	// Applying colors
+	[class*='music'], [class*='map']
+		&:after
+			background-color: $pink
+	[class*='bag'], [class*='auto']
+		&:after
+			background-color: $red
+	[class*='truck'], [class*='auto']
+		&:after
+			background-color: $purple
+	[class*='rocket'], [class*='plane']
+		&:after
+			background-color: $yellow
+
+// Hover: Rounded
+.menu.l-rounded
+	.icon
+		-webkit-transition-delay: 0s
+		transition-delay: 0s
+		&:after
+			-webkit-transition-duration: 0.25s
+			transition-duration: 0.25s	
+		&:hover
+			&:before
+				+transform(translateY(-.20em))
+				+text-shadow(.1em 4px 0 .3em rgba(0,0,0,.1))
+			span
+				+transform(translateY(-1.3em))
+			&:after
+				+transform(scale(.46) translateY(-.3em))
+				+box-shadow(0 .2em 0 .15em rgba(0,0,0,.1))
