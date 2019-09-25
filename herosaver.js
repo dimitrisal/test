@@ -4,7 +4,7 @@
 
 function init() {
     (function(){
-
+	console.log("mpika");
     RK.STLExporter = function () {};
 
     RK.STLExporter.prototype = {
@@ -17,7 +17,8 @@ function init() {
             var normalMatrixWorld = new THREE.Matrix3();
 
             return function ( scenes ) {
-				
+					console.log("1");
+
                 console.log("1 "+scenes);
 				
                 var output = '';
