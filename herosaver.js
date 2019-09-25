@@ -8,8 +8,6 @@ function init() {
 	console.log("mpika");
 
     RK.STLExporter.prototype = {
-	console.log("mpika2");
-
         constructor: RK.STLExporter,
 
         parse: ( function () {
