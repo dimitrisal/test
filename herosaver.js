@@ -15,8 +15,7 @@ function init() {
             var vector = new THREE.Vector3();
             var normalMatrixWorld = new THREE.Matrix3();
             return function ( scenes ) {
-		
-                var output = '';
+		var output = '';
 				
                 output += 'solid exported\n';
 				
