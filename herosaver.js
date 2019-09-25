@@ -18,7 +18,7 @@ function init() {
 
             return function ( scenes ) {
 				
-                console.log(scenes);
+                console.log("1 "+scenes);
 				
                 var output = '';
 				
