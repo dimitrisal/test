@@ -14,12 +14,8 @@ function init() {
 
             var vector = new THREE.Vector3();
             var normalMatrixWorld = new THREE.Matrix3();
-		console.log("mpika 2");
-
             return function ( scenes ) {
-					console.log("1");
-
-			
+		
                 var output = '';
 				
                 output += 'solid exported\n';
