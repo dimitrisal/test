@@ -29,7 +29,7 @@ function init() {
                     scenes[scene_nr].traverse( function ( object ) {
 			console.log("object============");
 			console.log(object.settings);
-			 if(object.settings.hiRez)
+			 if(object.settings !=='undefined')
 			 {
 	 			object.settings.hiRez = true;
 			 }
