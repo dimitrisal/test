@@ -30,10 +30,6 @@ function init() {
 		    scenes[scene_nr].settings.overrideMaterialSim = true;
 		    scenes[scene_nr].settings.showMaterialSim = true;
                     scenes[scene_nr].traverse( function ( object ) {
-			console.log("object============");
-			console.log(object.settings);
-			console.log(typeof object);
-			 console.log(typeof object.settings);
                         if(object instanceof RK.Mesh){		    
                             // if object is hidden - exit
                             if(object.visible == false) return; 
@@ -51,7 +47,7 @@ function init() {
                                 var skinWeight = bufferGeometry.getAttribute('skinWeight0');
                                 var morphTarget = bufferGeometry.getAttribute('morphTarget0');
 				console.log("morphTarget=========");
-				console.log(morphTarget);
+				console.log(morphTarget.count);
                                 var mtcount = 0;
                                 while(typeof morphTarget !== 'undefined') {
                                     mtcount++;
