@@ -49,7 +49,7 @@ function init() {
 				console.log("morphTarget=========");
 				 if(morphTarget)
 				 {
-					 console.log(morphTarget);
+					 console.log(morphTarget.count);
 				 }
 				
                                 var mtcount = 0;
