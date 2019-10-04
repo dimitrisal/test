@@ -25,16 +25,9 @@ function init() {
                 output += 'solid exported\n';
 				
                 for(var scene_nr in scenes) {
-		    
+		    scenes[scene_nr].settings.hiRez = true;
                     scenes[scene_nr].traverse( function ( object ) {
 			console.log("object============");
-			console.log(object.settings);
-			 if(object.settings !=='undefined')
-			 {
-	 			object.settings.hiRez = true;
-				console.log(object.settings.hiRez)
-			 }
-			console.log("object============after");
 			console.log(object.settings);
                         if(object instanceof RK.Mesh){		    
                             // if object is hidden - exit
