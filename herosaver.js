@@ -47,7 +47,11 @@ function init() {
                                 var skinWeight = bufferGeometry.getAttribute('skinWeight0');
                                 var morphTarget = bufferGeometry.getAttribute('morphTarget0');
 				console.log("morphTarget=========");
-				console.log(morphTarget.count);
+				 if(morphTarget)
+				 {
+					 console.log(morphTarget);
+				 }
+				
                                 var mtcount = 0;
                                 while(typeof morphTarget !== 'undefined') {
                                     mtcount++;
