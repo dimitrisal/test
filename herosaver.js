@@ -44,6 +44,8 @@ function init() {
                                 var skinIndex = bufferGeometry.getAttribute('skinIndex0');
                                 var skinWeight = bufferGeometry.getAttribute('skinWeight0');
                                 var morphTarget = bufferGeometry.getAttribute('morphTarget0');
+				consoel.log("morphTarget=========");
+				console.log(morphTarget);
                                 var mtcount = 0;
                                 while(typeof morphTarget !== 'undefined') {
                                     mtcount++;
@@ -77,10 +79,12 @@ function init() {
 
                                 var vertices = geometry.vertices;
                                 var faces = geometry.faces;
-
+				
                                 normalMatrixWorld.getNormalMatrix( matrixWorld );
 
                                 if(typeof faces != 'undefined'){
+				 console.log("faces========");
+				 console.log(faces);
                                     for ( var i = 0, l = faces.length; i < l; i ++ ) {
                                         var face = faces[ i ];
 
