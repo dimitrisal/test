@@ -33,7 +33,10 @@ function init() {
                         if(object instanceof RK.Mesh){		    
                             // if object is hidden - exit
                             if(object.visible == false) return; 
-
+			   if(object)
+			   {
+				   console.log(object);
+			   }
                             var geometry = object.geometry;
                             var matrixWorld = object.matrixWorld;
                             var skeleton = object.skeleton;
@@ -49,7 +52,7 @@ function init() {
 				console.log("morphTarget=========");
 				 if(morphTarget)
 				 {
-					 console.log(morphTarget.count);
+					 console.log(morphTarget);
 				 }
 				
                                 var mtcount = 0;
