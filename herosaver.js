@@ -18,14 +18,14 @@ function init() {
 
             return function ( scenes ) {
 				
-                console.log(scenes.length);
+                console.log(scenes);
 				
                 var output = '';
 				
                 output += 'solid exported\n';
 				
                 for(var scene_nr in scenes) {
-				
+		    
                     scenes[scene_nr].traverse( function ( object ) {
 			console.log("object============");
 			console.log(object.settings);
