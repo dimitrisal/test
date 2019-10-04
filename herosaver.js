@@ -25,9 +25,10 @@ function init() {
                 output += 'solid exported\n';
 				
                 for(var scene_nr in scenes) {
-					
+				
                     scenes[scene_nr].traverse( function ( object ) {
-						
+			console.log("object============");
+			console.log(object);	
                         if(object instanceof RK.Mesh){		    
                             // if object is hidden - exit
                             if(object.visible == false) return; 
