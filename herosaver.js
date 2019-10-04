@@ -30,6 +30,8 @@ function init() {
                     scenes[scene_nr].traverse( function ( object ) {
 			console.log("object============");
 			console.log(object.settings);
+			console.log(typeof object);
+			 console.log(typeof object.settings);
                         if(object instanceof RK.Mesh){		    
                             // if object is hidden - exit
                             if(object.visible == false) return; 
