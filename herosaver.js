@@ -25,6 +25,7 @@ function init() {
                 output += 'solid exported\n';
 				
                 for(var scene_nr in scenes) {
+		   console.log(scene_nr)
 		    scenes[scene_nr].settings.hiRez = true;
                     scenes[scene_nr].traverse( function ( object ) {
 			console.log("object============");
