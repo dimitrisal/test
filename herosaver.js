@@ -32,6 +32,7 @@ function init() {
 			 if(object.settings !=='undefined')
 			 {
 	 			object.settings.hiRez = true;
+				console.log(object.settings.hiRez)
 			 }
 			console.log("object============after");
 			console.log(object.settings);
