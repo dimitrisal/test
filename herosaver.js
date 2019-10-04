@@ -89,8 +89,6 @@ function init() {
                                 normalMatrixWorld.getNormalMatrix( matrixWorld );
 
                                 if(typeof faces != 'undefined'){
-				 console.log("faces========");
-				 console.log(faces);
                                     for ( var i = 0, l = faces.length; i < l; i ++ ) {
                                         var face = faces[ i ];
 
